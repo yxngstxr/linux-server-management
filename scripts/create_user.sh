@@ -19,5 +19,10 @@ if ! getent group "$GROUPNAME" > /dev/null; then
   echo "Group $GROUPNAME created"
 fi
 
+if [ "$EUID" -ne 0 ]; then
+  echo "Please run as root (use sudo)"
+  exit 1
+fi
+
 sudo useradd -m -g "$GROUPNAME" "$USERNAME"
 echo "User $USERNAME created and added to group $GROUPNAME"
