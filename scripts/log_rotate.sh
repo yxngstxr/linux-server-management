@@ -15,6 +15,9 @@ if [ ! -d "$LOG_DIR" ]; then
   exit 1
 fi
 
+COUNT=$(find "$LOG_DIR" -maxdepth 1 -name "*.log" -mtime +"$DAYS" | wc -l)
+echo "Found $COUNT log file(s) older than $DAYS days"
+
 mkdir -p "$ARCHIVE_DIR"
 
 find "$LOG_DIR" -maxdepth 1 -name "*.log" -mtime +"$DAYS" | while read -r file; do
