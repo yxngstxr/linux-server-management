@@ -9,6 +9,11 @@ if [ -z "$SOURCE_DIR" ]; then
   exit 1
 fi
 
+if [ ! -d "$SOURCE_DIR" ]; then
+  echo "Error: Directory $SOURCE_DIR does not exist"
+  exit 1
+fi
+
 mkdir -p "$BACKUP_DIR"
 
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
