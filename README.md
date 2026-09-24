@@ -1,2 +1,1 @@
-This project provides comprehensive tools for Linux server administratio and automation
-
+This project provides comprehensive tools, script, and documantation for managing Linux servers efficiently 
