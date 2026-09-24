@@ -1,1 +1,1 @@
-This project provides essential scripts and documantiation for managing Linux servers efficiently 
+This project provides comprehensive tools, script, and documantation for managing Linux servers efficiently 
