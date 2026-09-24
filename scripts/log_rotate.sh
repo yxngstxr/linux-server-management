@@ -14,7 +14,7 @@ if [ ! -d "$LOG_DIR" ]; then
   echo "Error: Directory $LOG_DIR does not exist"
   exit 1
 fi
-
+#Fixed:D
 COUNT=$(find "$LOG_DIR" -maxdepth 1 -name "*.log" -mtime +"$DAYS" | wc -l)
 echo "Found $COUNT log file(s) older than $DAYS days"
 
