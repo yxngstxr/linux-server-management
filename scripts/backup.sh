@@ -14,6 +14,8 @@ if [ ! -d "$SOURCE_DIR" ]; then
   exit 1
 fi
 
+#Thinking how realize the script
+
 mkdir -p "$BACKUP_DIR"
 
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
